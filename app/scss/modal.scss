@@ -41,11 +41,11 @@
     background-color: $title;
     text-transform: uppercase;
     color: #fff;
-     @extend %roboto-400;
-     padding: 14px 0;
-     border: none;
-     width: 100%;
-     cursor: pointer;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
   }
 
   &__error {
