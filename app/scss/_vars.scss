@@ -39,7 +39,8 @@ $bg: #f6f6f6;
   background-position: center center;
 }
 
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hedden {
   width: 1px;
   height: 1px;
   overflow: hidden;
