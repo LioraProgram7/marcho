@@ -37,7 +37,6 @@
 
       svg path {
         fill: $accent;
-
       }
     }
 
@@ -175,8 +174,6 @@
     margin-bottom: 35px;
   }
 
-  // .latest-post__post {}
-
   &__item {
     margin-bottom: 20px;
     display: flex;
@@ -199,8 +196,6 @@
     object-fit: cover;
   }
 
-  // .latest-post__box {}
-
   &__title-link {
     @extend %roboto-400;
     font-size: 18px;
@@ -208,18 +203,18 @@
     line-height: 28px;
   }
 
+  &__date {
+    padding-left: 26px;
+    position: relative;
 
-
-&__date {
-  padding-left: 26px;
-  position: relative;
-  &::before {
-    content:'';
-    position: absolute;
-    background-image: url('../images/icons/calendar.svg');left: 0;
-    top: 5px;
-    width: 16px;
-    height: 16px;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/calendar.svg');
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+    }
   }
-}
 }
