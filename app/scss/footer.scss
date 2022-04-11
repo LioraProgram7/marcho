@@ -66,6 +66,10 @@
     color: $title;
   }
 
+  &__form {
+    display: flex;
+  }
+
   &__link {
     margin-bottom: 14px;
     display: block;
