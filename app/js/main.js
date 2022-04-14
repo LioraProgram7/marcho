@@ -1,16 +1,24 @@
 $(function () {
 
-  $('.blog-page__slider').slick({
-    prevArrow:  '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"><g><path d="M 5.621094 7 L 11.007812 2.113281 C 11.488281 1.628906 11.488281 0.847656 11.007812 0.363281 C 10.523438 -0.121094 9.738281 -0.121094 9.253906 0.363281 L 2.988281 6.046875 C 2.726562 6.308594 2.613281 6.660156 2.632812 7 C 2.613281 7.34375 2.726562 7.691406 2.988281 7.953125 L 9.257812 13.640625 C 9.738281 14.121094 10.523438 14.121094 11.007812 13.640625 C 11.492188 13.15625 11.492188 12.371094 11.007812 11.886719 Z M 5.621094 7 "/></g></svg></button>',
-
-    nextArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"><g> <path d="M 11.011719 6.046875 L 4.746094 0.363281 C 4.261719 -0.121094 3.476562 -0.121094 2.996094 0.363281 C 2.511719 0.847656 2.511719 1.628906 2.996094 2.113281 L 8.382812 7 L 2.996094 11.886719 C 2.511719 12.371094 2.511719 13.15625 2.996094 13.636719 C 3.476562 14.121094 4.261719 14.121094 4.746094 13.636719 L 11.011719 7.953125 C 11.273438 7.691406 11.386719 7.34375 11.367188 7 C 11.386719 6.660156 11.273438 6.308594 11.011719 6.046875 Z M 11.011719 6.046875 "/></g></svg></button>',
-    
-    
-   
-     infinite: false,
+  $('.shop__filter-btn').on('click', function () {
+    $('.shop__filters').slideToggle();
   });
 
-  
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.blog-page__slider').slick({
+    prevArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"><g><path d="M 5.621094 7 L 11.007812 2.113281 C 11.488281 1.628906 11.488281 0.847656 11.007812 0.363281 C 10.523438 -0.121094 9.738281 -0.121094 9.253906 0.363281 L 2.988281 6.046875 C 2.726562 6.308594 2.613281 6.660156 2.632812 7 C 2.613281 7.34375 2.726562 7.691406 2.988281 7.953125 L 9.257812 13.640625 C 9.738281 14.121094 10.523438 14.121094 11.007812 13.640625 C 11.492188 13.15625 11.492188 12.371094 11.007812 11.886719 Z M 5.621094 7 "/></g></svg></button>',
+
+    nextArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"><g> <path d="M 11.011719 6.046875 L 4.746094 0.363281 C 4.261719 -0.121094 3.476562 -0.121094 2.996094 0.363281 C 2.511719 0.847656 2.511719 1.628906 2.996094 2.113281 L 8.382812 7 L 2.996094 11.886719 C 2.511719 12.371094 2.511719 13.15625 2.996094 13.636719 C 3.476562 14.121094 4.261719 14.121094 4.746094 13.636719 L 11.011719 7.953125 C 11.273438 7.691406 11.386719 7.34375 11.367188 7 C 11.386719 6.660156 11.273438 6.308594 11.011719 6.046875 Z M 11.011719 6.046875 "/></g></svg></button>',
+
+
+
+    infinite: false,
+  });
+
+
 
   $('.product-tabs__top-item').on('click', function (e) {
     e.preventDefault();
@@ -35,7 +43,13 @@ $(function () {
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [{
+      breakpoint: 1051,
+      settings: {
+        draggable: true,
+      }
+    }, ]
   });
 
   $('.shop-content__filter-btn').on('click', function () {
@@ -45,10 +59,12 @@ $(function () {
 
   $('.button-list').on('click', function () {
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
   });
 
   $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
 
@@ -131,7 +147,7 @@ $(function () {
   initializeClock('promo__clock', deadline);
 
 
-  
+
 
 
 });

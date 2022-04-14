@@ -16,6 +16,7 @@
     @extend %roboto-700;
     color: #28384f;
     font-size: 48px;
+    line-height: 52px;
     margin-bottom: 40px;
     text-transform: uppercase;
   }
@@ -32,5 +33,32 @@
     padding: 14px 35px;
     @extend %roboto-400;
     box-shadow: 0px 5px 25px 0px rgba(254, 62, 87, 0.35);
+  }
+}
+
+
+@media (max-width: 1230px) {
+  .page-404 {
+    &__img {
+      max-width: 40%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-404 {
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .page-404 {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
   }
 }

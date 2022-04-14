@@ -23,7 +23,6 @@
   &__lable {
     margin-bottom: 30px;
     display: block;
-
   }
 
   &__input {
@@ -57,5 +56,17 @@
   &__text {
     margin-bottom: 25px;
   }
+}
 
+
+@media (max-width: 375px) {
+  .modal {
+    padding-top: 60px;
+    margin: 0 auto 70px;
+  }
+
+  .modal__link {
+    margin: 0 20px;
+
+  }
 }
